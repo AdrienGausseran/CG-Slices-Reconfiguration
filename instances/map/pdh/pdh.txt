@@ -1,0 +1,98 @@
+# network pdh
+
+# NODE SECTION
+#
+# <node_id> ( capacity ) ( List of vnfs that can be installed on the node)
+
+NODES (
+  N1 ( 0 ) [  ]
+  N2 ( 8000 ) [ F1 F2 F3 F4 F5 F6 ]
+  N3 ( 0 ) [  ]
+  N4 ( 0 ) [  ]
+  N5 ( 8000 ) [ F1 F2 F3 F4 F5 F6 ]
+  N6 ( 0 ) [  ]
+  N7 ( 8000 ) [ F1 F2 F3 F4 F5 F6 ]
+  N8 ( 0 ) [  ]
+  N9 ( 0 ) [  ]
+  N10 ( 8000 ) [ F1 F2 F3 F4 F5 F6 ]
+  N11 ( 0 ) [  ]
+)
+
+# LINK SECTION
+#
+# <link_id> ( <source> <target> ) ( capacity delay )
+
+LINKS (
+  L1_N1_N9 ( N1 N9 ) ( 100 0.01 )
+  L2_N1_N10 ( N1 N10 ) ( 100 0.02 )
+  L3_N10_N11 ( N10 N11 ) ( 100 0.0 )
+  L4_N10_N2 ( N10 N2 ) ( 100 0.01 )
+  L5_N10_N3 ( N10 N3 ) ( 100 0.02 )
+  L6_N10_N7 ( N10 N7 ) ( 100 0.04 )
+  L7_N10_N8 ( N10 N8 ) ( 100 0.03 )
+  L8_N11_N2 ( N11 N2 ) ( 100 0.01 )
+  L9_N11_N3 ( N11 N3 ) ( 100 0.01 )
+  L10_N11_N7 ( N11 N7 ) ( 100 0.04 )
+  L11_N11_N8 ( N11 N8 ) ( 100 0.03 )
+  L12_N2_N3 ( N2 N3 ) ( 100 0.01 )
+  L13_N1_N7 ( N1 N7 ) ( 100 0.02 )
+  L14_N2_N4 ( N2 N4 ) ( 100 0.01 )
+  L15_N2_N5 ( N2 N5 ) ( 100 0.02 )
+  L16_N2_N6 ( N2 N6 ) ( 100 0.02 )
+  L17_N2_N8 ( N2 N8 ) ( 100 0.02 )
+  L18_N3_N4 ( N3 N4 ) ( 100 0.01 )
+  L19_N3_N5 ( N3 N5 ) ( 100 0.02 )
+  L20_N3_N6 ( N3 N6 ) ( 100 0.02 )
+  L21_N4_N5 ( N4 N5 ) ( 100 0.01 )
+  L22_N4_N6 ( N4 N6 ) ( 100 0.01 )
+  L23_N5_N6 ( N5 N6 ) ( 100 0.01 )
+  L24_N1_N8 ( N1 N8 ) ( 100 0.02 )
+  L25_N5_N7 ( N5 N7 ) ( 100 0.03 )
+  L26_N5_N8 ( N5 N8 ) ( 100 0.02 )
+  L27_N6_N8 ( N6 N8 ) ( 100 0.01 )
+  L28_N7_N8 ( N7 N8 ) ( 100 0.01 )
+  L29_N9_N10 ( N9 N10 ) ( 100 0.02 )
+  L30_N9_N11 ( N9 N11 ) ( 100 0.02 )
+  L31_N9_N2 ( N9 N2 ) ( 100 0.01 )
+  L32_N9_N6 ( N9 N6 ) ( 100 0.02 )
+  L33_N9_N7 ( N9 N7 ) ( 100 0.02 )
+  L34_N9_N8 ( N9 N8 ) ( 100 0.02 )
+)
+
+# DEMAND SECTION
+#
+# <demand_id> ( <source> <target> ) <routing_unit> <demand_value> <max_path_length>
+
+DEMANDS (
+  D1 ( N9 N2 ) 1 384.00 UNLIMITED
+  D2 ( N3 N4 ) 1 215.00 UNLIMITED
+  D3 ( N7 N8 ) 1 212.00 UNLIMITED
+  D4 ( N10 N3 ) 1 197.00 UNLIMITED
+  D5 ( N9 N11 ) 1 160.00 UNLIMITED
+  D6 ( N2 N8 ) 1 160.00 UNLIMITED
+  D7 ( N2 N5 ) 1 144.00 UNLIMITED
+  D8 ( N1 N7 ) 1 138.00 UNLIMITED
+  D9 ( N3 N5 ) 1 124.00 UNLIMITED
+  D10 ( N6 N8 ) 1 115.00 UNLIMITED
+  D11 ( N1 N10 ) 1 115.00 UNLIMITED
+  D12 ( N10 N11 ) 1 364.00 UNLIMITED
+  D13 ( N5 N8 ) 1 108.00 UNLIMITED
+  D14 ( N4 N5 ) 1 105.00 UNLIMITED
+  D15 ( N9 N8 ) 1 100.00 UNLIMITED
+  D16 ( N11 N3 ) 1 99.00 UNLIMITED
+  D17 ( N5 N6 ) 1 95.00 UNLIMITED
+  D18 ( N2 N3 ) 1 278.00 UNLIMITED
+  D19 ( N11 N2 ) 1 266.00 UNLIMITED
+  D20 ( N9 N10 ) 1 263.00 UNLIMITED
+  D21 ( N1 N9 ) 1 258.00 UNLIMITED
+  D22 ( N9 N7 ) 1 247.00 UNLIMITED
+  D23 ( N2 N6 ) 1 237.00 UNLIMITED
+  D24 ( N2 N4 ) 1 237.00 UNLIMITED
+)
+
+# ADMISSIBLE PATHS SECTION
+#
+# <demand_id> ( {<path_id> ( <link_id>+ )}+ )
+
+ADMISSIBLE_PATHS ( 
+)

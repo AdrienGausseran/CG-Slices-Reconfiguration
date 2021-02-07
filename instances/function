@@ -1,0 +1,7 @@
+#FunctionName ratio_CPU/Transit function_description
+F1 1 NAT
+F2 1 TM
+F3 2 WOC
+F4 2 VOC
+F5 3 IDPS
+F6 1 FW
