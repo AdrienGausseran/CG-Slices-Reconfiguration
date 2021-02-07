@@ -81,4 +81,4 @@ Here you need to understand the concept of layer graph used two map the SFCs
 
 
 
-	We this you can easily create a main file to load the network, change his capacities, load an instance and try the allocation and the different reconfigurations
+With this you can easily create a main file to load the network, change his capacities, load an instance and try the allocation and the different reconfigurations
